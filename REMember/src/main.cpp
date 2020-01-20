@@ -21,7 +21,7 @@ int main()
 
     std::cout << elem.a.i << std::endl;                     // output: 54
 
-    C c{ 24 };
+    C c{ {24} };
     auto& ci = i_indirect::get_ref(c);
 
     std::cout << ci << std::endl;                           // outputs: 24

@@ -6,7 +6,7 @@
 template<auto Member, auto ... MemPtrList>
 constexpr inline auto& member_resolve_all(get_member_owner_t<decltype(Member)>* elem)
 {
-    constexpr static std::size_t remaining = get_count<MemPtrList...>::value;
+    constexpr std::size_t remaining = get_count<MemPtrList...>::value;
     if constexpr (remaining == 0)
     {
         return elem->*Member;
